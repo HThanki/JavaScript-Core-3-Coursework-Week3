@@ -70,3 +70,20 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+let [{ firstName, lastName, house, pet, occupation }] = hogwarts;
+
+function gryffindorHousePeople(hogwarts) {
+  for (let person in hogwarts) {
+    if (hogwarts[person].house == "Gryffindor") {
+      console.log(`${hogwarts[person].firstName} ${hogwarts[person].lastName}`);
+    }
+  }
+}
+gryffindorHousePeople(hogwarts);
+
+// Harry Potter
+// Ron Weasley
+// Hermione Granger
+// Minerva McGonagall
+// Albus Dumbledore
