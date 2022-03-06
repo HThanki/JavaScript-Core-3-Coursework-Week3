@@ -81,9 +81,3 @@ function gryffindorHousePeople(hogwarts) {
   }
 }
 gryffindorHousePeople(hogwarts);
-
-// Harry Potter
-// Ron Weasley
-// Hermione Granger
-// Minerva McGonagall
-// Albus Dumbledore

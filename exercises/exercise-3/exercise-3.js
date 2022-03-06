@@ -6,3 +6,28 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function printReceipt(order) {
+  let totalCost = 0;
+
+  let qty = `QTY${" ".repeat(4)}`;
+  let item = `ITEM${" ".repeat(16)}`;
+  console.log(`${qty}${item}TOTAL`);
+
+  for (let item in order) {
+    let { itemName, quantity, unitPrice } = order[item];
+    totalCost += unitPrice * quantity;
+
+    let characterSpaces = " ".repeat(20 - itemName.length);
+
+    console.log(
+      `${quantity}${" ".repeat(6)}${itemName}${characterSpaces}${(
+        unitPrice * quantity
+      ).toFixed(2)}`
+    );
+  }
+  console.log("");
+  console.log(`Total: ${totalCost}`);
+}
+
+printReceipt(order);
