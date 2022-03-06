@@ -71,12 +71,12 @@ let hogwarts = [
   },
 ];
 
-let [{ firstName, lastName, house, pet, occupation }] = hogwarts;
-
 function gryffindorHousePeople(hogwarts) {
   for (let person in hogwarts) {
-    if (hogwarts[person].house == "Gryffindor") {
-      console.log(`${hogwarts[person].firstName} ${hogwarts[person].lastName}`);
+    let { firstName, lastName, house, pet, occupation } = hogwarts[person];
+
+    if (house == "Gryffindor") {
+      console.log(`${firstName} ${lastName}`);
     }
   }
 }
