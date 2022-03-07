@@ -80,4 +80,17 @@ function gryffindorHousePeople(hogwarts) {
     }
   }
 }
+
 gryffindorHousePeople(hogwarts);
+
+function teachersWhoHavePets(hogwarts) {
+  for (let person in hogwarts) {
+    let { firstName, lastName, house, pet, occupation } = hogwarts[person];
+
+    if (occupation == "Teacher" && pet) {
+      console.log(`${firstName} ${lastName}`);
+    }
+  }
+}
+
+teachersWhoHavePets(hogwarts);
